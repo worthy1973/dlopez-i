@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_sort_int_tab.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/15 10:52:54 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/07/18 12:40:49 by dlopez-i         ###   ########.fr       */
+/*   Created: 2022/07/20 11:07:47 by dlopez-i          #+#    #+#             */
+/*   Updated: 2022/07/25 17:01:16 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-void	ft_ft(int *nbr)
-{
-	*nbr = 42;
-}
+void	ft_sort_int_tab(int *tab, int size)
 
-/*int	main(void)
 {
-	int	a;
-	int *ptr;
-	
-	a = 19;
-	ptr = &a;
-	printf("%d\n", a);
-	ft_ft(ptr);
-	printf("%d", a);
-	return (0);
+	int	count;
+	int	second_place;
+	int	temp;
+
+	count = 0;
+	while (count < size)
+	{
+		second_place = count + 1;
+		while (second_place < size)
+		{
+			if (tab[count] > tab[second_place])
+			{
+				temp = tab[second_place];
+				tab[second_place] = tab[count];
+				tab[count] = temp;
+			}
+			second_place++;
+		}
+		{
+		count++;
+		}
+	}
 }
-*/

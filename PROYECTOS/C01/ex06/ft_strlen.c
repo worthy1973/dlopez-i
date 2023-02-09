@@ -1,33 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/15 10:52:54 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/07/18 12:40:49 by dlopez-i         ###   ########.fr       */
+/*   Created: 2022/07/19 12:19:48 by dlopez-i          #+#    #+#             */
+/*   Updated: 2022/07/20 15:12:25 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
+#include <stdio.h>
 
-void	ft_ft(int *nbr)
-{
-	*nbr = 42;
-}
+int	ft_strlen(char *str)
 
-/*int	main(void)
 {
 	int	a;
-	int *ptr;
+
+	a = 0;
+	while (str[a] != '\0')
+	{
+		a++;
+	}
+	return (a);
+}
+/*
+int	main(void)
+
+{
+	char	a[] = "Hello World";
 	
-	a = 19;
-	ptr = &a;
-	printf("%d\n", a);
-	ft_ft(ptr);
-	printf("%d", a);
-	return (0);
+	ft_strlen(a);
+	printf("%s\n", a);
+	printf("Este string tiene %d  caracteres", ft_strlen(a));
+	return(0);
+
 }
 */

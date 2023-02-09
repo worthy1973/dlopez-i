@@ -1,33 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ft.c                                            :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dlopez-i <dlopez-i@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/15 10:52:54 by dlopez-i          #+#    #+#             */
-/*   Updated: 2022/07/18 12:40:49 by dlopez-i         ###   ########.fr       */
+/*   Created: 2022/07/18 20:33:11 by dlopez-i          #+#    #+#             */
+/*   Updated: 2022/07/28 16:50:18 by dlopez-i         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <unistd.h>
 
-void	ft_ft(int *nbr)
-{
-	*nbr = 42;
-}
-
-/*int	main(void)
+void	ft_putstr(char *str)
 {
 	int	a;
-	int *ptr;
-	
-	a = 19;
-	ptr = &a;
-	printf("%d\n", a);
-	ft_ft(ptr);
-	printf("%d", a);
+
+	a = 0;
+	while (str[a] != '\0')
+	{
+		write(1, &str[a], 1);
+		str++;
+	}
+}
+/*
+int	main()
+{  
+	char	input[] = "Hello World";
+
+	ft_putstr(input);
 	return (0);
 }
 */
